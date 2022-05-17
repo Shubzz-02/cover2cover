@@ -157,7 +157,7 @@ def jacoco2cobertura(filename, source_roots):
     into = ET.Element('coverage')
     convert_root(root, into, source_roots)
     print('<?xml version="1.0" ?>')
-    print(ET.tostring(into))
+    print(ET.tostring(into, encoding='utf8', method='xml'))
 
 
 if __name__ == '__main__':
